@@ -4,8 +4,8 @@ import './App.css';
 function App() {
   // State to hold tasks, now with a 'priority' property
   const [tasks, setTasks] = useState([
-    { id: 1, title: 'Learn React', description: 'Focus on hooks.', time: '2 hours', priority: 'high', completed: true },
-    { id: 2, title: 'Build To-Do App', description: 'Add features.', time: '3 hours', priority: 'medium', completed: false }
+    { id: 1, title: 'Learn DSA', description: 'Focus on DP.', time: '2 hours', priority: 'high', completed: true },
+    { id: 2, title: 'Socrates', description: 'Knowledge is highest virtue.', time: '3 hours', priority: 'medium', completed: false }
   ]);
 
   // State object to manage form inputs, with a default priority
