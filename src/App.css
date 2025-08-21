@@ -1,0 +1,134 @@
+/* General App Styling - MOBILE FIRST */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f9;
+  box-sizing: border-box;
+}
+
+/* Styles for larger screens (tablets and desktops) */
+@media (min-width: 600px) {
+  .app-container {
+    max-width: 800px;
+    min-height: auto;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+h1 { text-align: center; color: #333; }
+
+/* Input area */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.task-input, .task-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.task-textarea { resize: vertical; min-height: 80px; }
+.task-input:focus, .task-textarea:focus { outline: none; border-color: #7f5af0; }
+
+/* Priority Selector Styles */
+.priority-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.priority-selector label {
+  font-weight: bold;
+  color: #555;
+  border:20px
+}
+
+.priority-dot-input {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s;
+}
+
+.priority-dot-input:hover {
+  transform: scale(1.1);
+}
+
+.priority-dot-input.selected {
+  border-color: #333; /* Highlights the selected dot */
+}
+
+.input-container button {
+  padding: 12px 15px;
+  background-color: #7f5af0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.input-container button:hover {
+  background-color: #6a46d1;
+}
+
+/* Task List */
+.task-list { list-style-type: none; padding: 0; }
+
+.task-list li {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  gap: 15px; /* Adds space between dot and text */
+}
+
+/* Priority Dot Styles */
+.priority-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  flex-shrink: 0; /* Prevents dot from shrinking */
+  margin-top: 5px;
+}
+
+/* Dot Color Definitions */
+.high { background-color: #ff4d4d; } /* Red */
+.medium { background-color: #ffc107; } /* Yellow */
+.low { background-color: #28a745; } /* Green */
+
+
+.task-details { cursor: pointer; flex-grow: 1; }
+.task-details h3 { margin: 0 0 5px 0; font-size: 18px; }
+.task-details p { margin: 0 0 8px 0; font-size: 14px; color: #666; white-space: pre-wrap; }
+.task-details small { font-style: italic; color: #888; }
+
+.task-list li.completed .task-details h3,
+.task-list li.completed .task-details p {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.delete-btn {
+  background: none; border: none; color: #ff4d4d;
+  font-size: 22px; font-weight: bold; cursor: pointer;
+  padding: 0; line-height: 1;
+}
